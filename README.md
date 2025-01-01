@@ -20,3 +20,6 @@ This project was developed with the following objectives:
 - A valid Groq API key
 - Flask library
 - Other dependencies
+
+  The project is hosted on Render and is available on the following link: https://ai-chatapp-6tcr.onrender.com/
+  (Might not work if i decide to take it off)
