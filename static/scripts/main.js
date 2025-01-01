@@ -18,6 +18,7 @@ document.getElementById('clear-button').addEventListener('click', function() {
 var j = 0;
 
 document.getElementById('send-button').addEventListener('click', function() {
+    chatbox.scrollTop = chatbox.scrollHeight;
     
     
     const user_input = document.getElementById('user_input').value;
@@ -40,7 +41,7 @@ document.getElementById('send-button').addEventListener('click', function() {
             var speed = 20;
             var i = 0;
             if (response.length > 400) {
-                speed = 5;
+                speed = 1;
             }
 
             let chatbox = document.getElementById('chatbox');
@@ -57,13 +58,18 @@ document.getElementById('send-button').addEventListener('click', function() {
                     document.getElementById(id).textContent += response.charAt(i);
                     i++;
                     console.log(i);
+                    if (chatbox.scrollHeight - chatbox.scrollTop > 50) {
+                        chatbox.scrollTop = chatbox.scrollHeight;
+                        console.log(chatbox.scrollTop);
+                    }
+
                     setTimeout(typeWriter, speed);
                 }
             }
             typeWriter();
 
             j++;
-
+            
 
         });
 

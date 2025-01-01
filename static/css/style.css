@@ -13,13 +13,22 @@ body {
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar-thumb {
+    background: #333;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    
+}
+
+
 
 /* Header */
 
 header {
     background-color: #333;
     color: white;
-    height: 60px;
+    height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,13 +59,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 1vh;
 }
 
 #user_input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 1vh;
+    margin-bottom: 1vh;
     border: 2px solid #8b8b8b;
     border-radius: 10px;
     font-size: 24px;
@@ -84,7 +93,7 @@ button {
     cursor: pointer;
     font-size: 24px;
     font-weight: 550;
-    margin: 20px;
+    margin: 2vh;
 }
 
 button:hover {
@@ -101,9 +110,18 @@ button:active {
 
 
 #clear-button:hover{
-    background-color: #c97257;
+    background-color: #423a37;
 
 }
+
+#chatbox::-webkit-scrollbar-thumb {
+    background: #665b4d;
+    border-radius: 10px; 
+}
+#chatbox::-webkit-scrollbar {
+    width: 10px;
+}
+
 
 .chat-bubble-bot {
     background-color: rgb(206, 228, 243);
@@ -114,7 +132,13 @@ button:active {
     font-size: 24px;
     max-width: 80%;
 
+    text-align: right;
+
+    border: 1px solid #00000071;
+
     transition: all 0.3s;
+
+
 
 }
 
@@ -127,14 +151,19 @@ button:active {
     font-size: 24px;
     max-width: 80%;
 
+    text-align: left;
+
+    border: 1px solid #00000071;
+
+
     transition: all 0.3s;
 }
 
 #chatbox {
     width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
     border: 2px solid #8b8b8b;
     border-radius: 10px;
     font-size: 24px;
@@ -153,9 +182,9 @@ button:active {
 footer {
     background-color: #333;
     color: white;
-    height: 55px;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    text-align: center;
 }
