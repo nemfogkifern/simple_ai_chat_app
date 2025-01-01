@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <title>AI Chatbot</title>
+</head>
+<body>
+    <header>
+        <h1>AI Chatbot</h1>
+    </header>
+
+    <main>
+        <div id="chatbox">
+
+        </div>
+        
+        
+        
+        <div class="chatbot">
+            <input type="text" id="user_input" placeholder="Ask the AI">
+            <div>
+                <button id="clear-button">Clear</button>
+                <button id="send-button">Send</button>
+            </div>          
+        </div>
+        
+
+
+            
+
+        </div>
+        
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Chatbot Project. This project was created for learning purposes to explore Flask, API integration, and frontend-backend communication.</p>
+    </footer>
+
+    
+    
+
+
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</body>
+</html>

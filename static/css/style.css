@@ -1,0 +1,161 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    max-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+header {
+    background-color: #333;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 45px;
+}
+
+
+
+
+/* Main */
+
+main {
+    display: flex;
+    /* justify-content: center; */
+
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.chatbot {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#user_input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #8b8b8b;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+#user_input:hover {
+    border: 2px solid #000000;
+    transition: border 0.3s;
+}
+#user_input:focus {
+    border: 2px solid #000000;
+    background-color: #bdb8dd;
+
+    transition: all 0.3s;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #8b8b8b;
+    color: black;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 550;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #a79ed8;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    transition: all 0.3s;
+}
+
+button:active {
+    background-color: #8b8b8b;
+    transition: all 0.3s;
+}
+
+
+#clear-button:hover{
+    background-color: #c97257;
+
+}
+
+.chat-bubble-bot {
+    background-color: rgb(206, 228, 243);
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: end;
+    margin: 20px;
+    font-size: 24px;
+    max-width: 80%;
+
+    transition: all 0.3s;
+
+}
+
+.chat-bubble-user {
+    background-color: rgb(214, 252, 213);
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: start;
+    margin: 20px;
+    font-size: 24px;
+    max-width: 80%;
+
+    transition: all 0.3s;
+}
+
+#chatbox {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border: 2px solid #8b8b8b;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #eeeeee;
+    height: 66vh;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
