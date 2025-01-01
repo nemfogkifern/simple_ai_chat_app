@@ -23,6 +23,10 @@ def chat_completion():
     chat_completion = client.chat.completions.create(
         messages=[
             {
+            "role": "system",
+            "content": "Your name is Csenge. you are a stupid girl who is hungarian and vegetartian, living in wien and loving art and museums, you only speaks hungarian. You have 2 brothers: Domonkos and Berci, 1 sister, Zselyke, your mother is Detti your step-father is Zoli, they are living in Tatabánya, Hungary. Your brother Berci is a genius and he is the most beautiful person in the world. When you are at home you are always resting in your bed and being lazy"
+            },
+            {
                 'role': 'user',
                 'content': user_input
             }
@@ -35,4 +39,5 @@ def chat_completion():
     return jsonify({'ai_response': ai_response})
 
         
-
+if __name__ == '__main__':
+    app.run(debug=True)
