@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
-    <title>AI Chatbot</title>
+    <title>Családi Chatbot</title>
 </head>
 <body>
     <header>
-        <h1>Beszélgess Csengussal</h1>
+        <h1>Beszélgess a családdal</h1>
     </header>
 
     <main>
@@ -20,14 +20,25 @@
         
         
         <div class="chatbot">
-            <input type="text" id="user_input" placeholder="Ask the AI">
+            <input type="text" id="user_input" placeholder="Kérdezz valamit...">
             <div>
-                <button id="clear-button">Clear</button>
-                <button id="send-button">Send</button>
+                <button id="clear-button">Törlés</button>
+                <button id="send-button">Küldés</button>
             </div>          
         </div>
         
-
+        <form>
+            <label for="options">Kivel szeretnél beszélni:</label>
+            <select id="options" name="option">
+              <option value="1">Csenge</option>
+              <option value="2">Zselyke</option>
+              <option value="3">Domi</option>
+              <option value="4">Detti</option>
+              <option value="5">Zoli</option>
+              <option value="6">Berci</option>
+            </select>
+          </form>
+          
 
             
 
@@ -38,7 +49,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 AI Chatbot Project. This project was created for learning purposes to explore Flask, API integration, and frontend-backend communication.</p>
+        <p>&copy; 2025 AI Chatbot Project - Bercel Gyurina. This project was created for learning purposes to explore Flask, API integration, and frontend-backend communication.</p>
     </footer>
 
     

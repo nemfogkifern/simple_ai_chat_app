@@ -26,7 +26,27 @@ document.getElementById('send-button').addEventListener('click', function() {
 
     createChatBubbleUser(user_input);
 
-    fetch('/chat_completion', {
+    var selected_person = document.getElementById('options').value
+    console.log(selected_person);
+
+    let api_to_fetch = '/chat_completion_csenge';
+    if (selected_person == 2) {
+        api_to_fetch = '/chat_completion_zselyke';
+    }
+    else if (selected_person == 3) {
+        api_to_fetch = '/chat_completion_domi';
+    }
+    else if (selected_person == 4) {
+        api_to_fetch = '/chat_completion_detti';
+    }
+    else if (selected_person == 5) {
+        api_to_fetch = '/chat_completion_zoli';
+    }
+    else if (selected_person == 6) {
+        api_to_fetch = '/chat_completion_berci';
+    }
+
+    fetch(api_to_fetch, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -58,10 +78,10 @@ document.getElementById('send-button').addEventListener('click', function() {
                     document.getElementById(id).textContent += response.charAt(i);
                     i++;
                     console.log(i);
-                    if (chatbox.scrollHeight - chatbox.scrollTop > 50) {
-                        chatbox.scrollTop = chatbox.scrollHeight;
-                        console.log(chatbox.scrollTop);
-                    }
+                    // if (chatbox.scrollHeight - chatbox.scrollTop > 50) {
+                    //     chatbox.scrollTop = chatbox.scrollHeight;
+                    //     console.log(chatbox.scrollTop);
+                    // }
 
                     setTimeout(typeWriter, speed);
                 }
@@ -76,6 +96,10 @@ document.getElementById('send-button').addEventListener('click', function() {
 });
 
 
+
+
+
+
 function createChatBubbleUser(content) {
     let chatbox = document.getElementById('chatbox');
     let chatBubble = document.createElement('div'); 
@@ -84,11 +108,5 @@ function createChatBubbleUser(content) {
     chatbox.appendChild(chatBubble);
 }
 
-function createChatBubbleBot(content) {
-    let chatbox = document.getElementById('chatbox');
-    let chatBubble = document.createElement('div'); 
-    chatBubble.classList.add('chat-bubble-bot');
-    chatBubble.innerHTML = content;
-    chatbox.appendChild(chatBubble);
-}
+
 

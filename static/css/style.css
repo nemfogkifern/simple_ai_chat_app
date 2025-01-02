@@ -35,7 +35,8 @@ header {
 }
 
 header h1 {
-    font-size: 45px;
+    font-size: 30px;
+    text-align: center;
 }
 
 
@@ -93,7 +94,7 @@ button {
     cursor: pointer;
     font-size: 24px;
     font-weight: 550;
-    margin: 2vh;
+    margin: 1vh;
 }
 
 button:hover {
@@ -110,7 +111,7 @@ button:active {
 
 
 #clear-button:hover{
-    background-color: #423a37;
+    background-color: #a84d4d;
 
 }
 
@@ -173,7 +174,39 @@ button:active {
 }
 
 
+form {
+    margin: 30px 10px;
+}
+label {
+    font-size: 24px;
+    margin-bottom: 3vh;
+    text-align: center;
+    width: 100%;
+}
+select {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 
+
+    cursor: pointer;
+
+  }
+
+  select:focus {
+    border-color: #000000;
+  }
+  
+
+  option {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+
+  
 
 
 
@@ -187,4 +220,5 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 11px;
 }
